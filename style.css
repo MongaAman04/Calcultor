@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.outer-container{
+    width: 30vw;
+    height: 90vh;
+    background-color:black;
+    border: 6px solid grey;
+    border-radius: 9px;
+}
+.display{
+    width: 560px;
+    height: 170px;
+    background-color: rgb(187, 30, 30);
+    margin-top: 6px;
+    margin-left: 8px;
+}
