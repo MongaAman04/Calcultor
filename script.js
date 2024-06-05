@@ -2,6 +2,7 @@ console.log("lets start javascript");
 
 let string ="";
 let buttons = document.querySelectorAll("button")
+let numbers = document.querySelectorAll(".number")
 
 Array.from(buttons).forEach((buttons) => {
     buttons.addEventListener("click", (e) => { 
@@ -16,7 +17,22 @@ Array.from(buttons).forEach((buttons) => {
         document.querySelector(".display").innerHTML = string;
     }
     })
+    buttons.addEventListener("keydown",(e)=>{
+        e.defaultPrevented
+        e.key
+        console.log(e.key);
+        if (isNaN(e.key)) {
+            document.querySelector(".display").innerHTML = "ERROR"
+            
+        }
+        else{
+            string = string + e.key
+            document.querySelector(".display").innerHTML = string
+        }
+
+    })
 })
+
 
 document.querySelector(".ac").addEventListener("click",(e)=>{
     
@@ -26,6 +42,7 @@ document.querySelector(".ac").addEventListener("click",(e)=>{
 
 document.querySelector(".del").addEventListener("click",(e)=>{
    
+
     let last = string.charAt(string.length-4)
     console.log(string.charAt(string.length-4));
     console.log(last);
